@@ -78,6 +78,9 @@ type Device interface {
 	// CancelConnection disconnects a remote peripheral.
 	CancelConnection(p Peripheral)
 
+	// Disconnect
+	Disconnect(p Peripheral)
+
 	// Handle registers the specified handlers.
 	Handle(h ...Handler)
 

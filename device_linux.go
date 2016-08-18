@@ -216,6 +216,9 @@ func (d *device) CancelConnection(p Peripheral) {
 	d.hci.CancelConnection(p.(*peripheral).pd)
 }
 
+func (d *device) Disconnect(p Peripheral) {
+}
+
 func (d *device) SendHCIRawCommand(c cmd.CmdParam) ([]byte, error) {
 	return d.hci.SendRawCommand(c)
 }
