@@ -36,6 +36,8 @@ func (s State) String() string {
 type Device interface {
 	Init(stateChanged func(Device, State)) error
 
+	Stop() error
+
 	// Advertise advertise AdvPacket
 	Advertise(a *AdvPacket) error
 
